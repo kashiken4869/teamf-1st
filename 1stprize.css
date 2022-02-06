@@ -8,6 +8,23 @@
 
 /* C's zone */
 
+.members_C{
+    display: flex;
+    flex-wrap: wrap;
+}
+.member_C{
+    margin: 10px;
+}
+@media screen and (min-width: 600px) {
+    .member_C {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .member_C {
+        width: 47%;
+    }
+}
 
 
 /* D's zone */
