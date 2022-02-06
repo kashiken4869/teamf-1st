@@ -3,7 +3,22 @@
 
 
 /* B's zone */
+.members_B {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.boxB {
+    width: 23%;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 
 /* C's zone */
