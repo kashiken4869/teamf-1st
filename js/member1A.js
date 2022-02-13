@@ -47,14 +47,15 @@ let naoki = document.getElementById('naoki')
 
 let result = GetQueryString()
 
-// for (let i = 0, )
 
 let text = 
     `<div class="containerA aboutA"> ` +
     `    <h1 class="name_title">${name_title[result["id"]-1]}</h1> ` +
     `    <div class="about_container_a"> ` +
-    `        <div class="member_img"> ` +
+    `        <div class="member_img change-img"> ` +
     `            <img src="../imgA/iisha${result["id"]}.jpg" alt=""> ` +
+    `            <img src="../imgA/iisha${result["id"]+11}.jpg" alt=""> ` +
+    `            <img src="../imgA/iisha${result["id"]+12}.jpg" alt=""> ` +
     `        </div> ` +
     `        <div class="member_text"> ` +
     `            <p class="text1">${prize[result["id"]-1]}</p> ` +
@@ -73,3 +74,18 @@ let text =
     `</div> ` ;
     naoki.insertAdjacentHTML("beforeend",text)
 
+// 画面切り替えアニメーション
+// for (let i = 1; i < 4; i++) {
+  $(function () {
+    var setImg = '.change-img';
+    var fadeSpeed = 2000;
+    var switchDelay = 3000;
+
+    $(setImg).children('img').css({ opacity: '0' });
+    $(setImg + ' img:first').stop().animate({ opacity: '1', zIndex: '20' }, fadeSpeed);
+
+    setInterval(function () {
+        $(setImg + ' :first-child').animate({ opacity: '0' }, fadeSpeed).next('img').animate({ opacity: '1' }, fadeSpeed).end().appendTo(setImg);
+    }, switchDelay);
+});
+// }
