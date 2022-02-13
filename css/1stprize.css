@@ -460,6 +460,8 @@ height: 100%;
   width: 23%;
   overflow: hidden;
   margin: 0 8px 10px;
+  text-decoration: none;
+  color: black;
 }
 .member_img_wrap_C{
   position: relative;
