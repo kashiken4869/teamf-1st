@@ -19,6 +19,7 @@ $(window).on('load',function(){
 // });
 
 const names = [
+// A
 'じん',
 'こうへい',
 'かずき',
@@ -27,25 +28,17 @@ const names = [
 'なおき',
 'あきら',
 'たいき',
-'じん',
-'こうへい',
-'かずき',
-'りさ',
-'かれん',
-'なおき',
-'あきら',
-'たいき',
-'じん',
-'こうへい',
-'かずき',
-'りさ',
-'かれん',
-'なおき',
-'あきら'
+// C
+"けんてぃ",
+"ぽんた",
+"かずのり",
+"てらし",
+"ことき",
+"もも",
+"つよし",
 ]
 
-let prize = [99,99999,999,999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999,99999
-]
+let prize = [99,99999,999,999,99999,99999,99999,99999,  "１億","２億","３億","４億","５億","６億","７億",]
 
 $(function () {
   $('.burger_btn').on('click', function () {
@@ -69,7 +62,7 @@ $('.more').on('click', function () {
   }
 });
 
-for (let i = 1; i < 24; i++) {
+for (let i = 1; i <= names.length; i++) {
   let introduction =
     `<li class="members_a">` +
     `<a href="member1A.html?id=${i}" >` +
@@ -106,53 +99,53 @@ $('.members_a').eq(i).addClass('change_color');
 // 配列を作ってjsで繰り返しのhtmlを記述した
 
 // 画像の配列
-const img = [
-  "/img_C/kento.png",
-  "/img_C/ponta.png",
-  "/img_C/kazunori.png",
-  "/img_C/keisiro.png",
-  "/img_C/kotoki.png",
-  "/img_C/momo.png",
-  "/img_C/tuyoshi.png",
-];
-// 名前の配列
-const memberName = [
-  "けんてぃ",
-  "ぽんた",
-  "かずのり",
-  "てらし",
-  "ことき",
-  "もも",
-  "つよし",
-]
-// 価格の配列
-const price = [
-  "１億",
-  "２億",
-  "３億",
-  "４億",
-  "５億",
-  "６億",
-  "７億",
-];
+// const img = [
+//   "/img_C/kento.png",
+//   "/img_C/ponta.png",
+//   "/img_C/kazunori.png",
+//   "/img_C/keisiro.png",
+//   "/img_C/kotoki.png",
+//   "/img_C/momo.png",
+//   "/img_C/tuyoshi.png",
+// ];
+// // 名前の配列
+// const memberName = [
+//   "けんてぃ",
+//   "ぽんた",
+//   "かずのり",
+//   "てらし",
+//   "ことき",
+//   "もも",
+//   "つよし",
+// ]
+// // 価格の配列
+// const price = [
+//   "１億",
+//   "２億",
+//   "３億",
+//   "４億",
+//   "５億",
+//   "６億",
+//   "７億",
+// ];
 
-// 繰り返しのhtml部分
-let contentsC = ""
+// // 繰り返しのhtml部分
+// let contentsC = ""
 
-for (let i=img.length-1; i>=0; i--) {
-  contentsC += `<li id="${i+1}" class="member_C">`
-          +`    <a href="/html/1_C.html?id=${i+1}">`
-          +`        <div class="member_img_wrap_C">`
-          +`          <img class="member_img_C" src="${img[i]}" alt="はにゃ">`
-          +`        </div>`
-          +`        <p class="member_name_C">${memberName[i]}</p>`
-          +`        <p class="member_price_C">¥${price[i]} +tax</p>`
-          +`    </a>`
-          +`</li>`
-};
+// for (let i=0; i<memberName.length; i++) {
+//   contentsC += `<li id="${i+1}" class="member_C">`
+//           +`    <a href="/html/1_C.html?id=${i+1}">`
+//           +`        <div class="member_img_wrap_C">`
+//           +`          <img class="member_img_C" src="/imgA/iisha${i+9}.png" alt="はにゃ">`
+//           +`        </div>`
+//           +`        <p class="member_name_C">${memberName[i]}</p>`
+//           +`        <p class="member_price_C">¥${price[i]} +tax</p>`
+//           +`    </a>`
+//           +`</li>`
+// };
 
-// htmlに挿入
-document.getElementById("membersC").insertAdjacentHTML('beforeend', contentsC);
+// // htmlに挿入
+// document.getElementById("membersC").insertAdjacentHTML('beforeend', contentsC);
 
 
 // D's zone
