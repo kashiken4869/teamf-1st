@@ -42,6 +42,16 @@
   }
 }
 
+.img-container {
+  object-fit: cover; 
+  position: relative;
+}
+
+.change-img1 {
+  overflow: hidden;
+  position: relative;
+}
+
 header {
   width: 100%;
   height: 100px;
@@ -62,6 +72,9 @@ header {
   object-fit: cover;
 }
 
+.change_color {
+  /* background-color: yellow; */
+}
 
 
 h1 {
@@ -104,8 +117,7 @@ h1 {
 }
 
 .burger_btn.close {
-  background_color: skyblue; 
-
+  background-color: skyblue; 
 }
 
 .burger_btn.close .bar_top{      
@@ -121,7 +133,6 @@ h1 {
 transform: translate(-50%,-5px) rotate(-45deg);      
 transition: transform .7s; 
   background-color: snow;
-
 }
 
   /* 以下、ハンバーガーメニュー */
@@ -180,14 +191,14 @@ transition: transform .7s;
 padding-top: 150px;
 display: flex;
 flex-wrap: wrap;
-/* justify-content: space-between; */
+justify-content: space-between;
 /* margin: 5px; */
 }
 
 .list li {
     width: 23%;
     overflow: hidden;
-    margin: 0 8px 10px;
+    /* margin: 0 8px 10px; */
 }
 
 #id01 {
@@ -197,13 +208,63 @@ height: 100%;
 display: none;
 }
 
+.members_a {
+  margin-bottom: 3vw;
+}
+
+
+.img_container {
+overflow: hidden;
+}
+
 .member_img_a {
 width:100%;
 height: 23vw;
+border-radius: 50%;
 position:relative;
 object-fit: cover;
-margin-bottom: 10px;
+margin-bottom: 2vw;
+transition:1s all;
 }
+
+/* .img-container{
+  position: relative;
+  width: 25%;
+}
+li:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  object-fit: cover;
+} */
+
+.member_img_a:hover {
+  /* transform:scale(1.4,1.4) rotate(20deg); */
+  transition:1s all;
+box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+/* :nth-child(3n) {
+background-color: #fff;
+  border-radius: 30% 0 ;
+} */
+/* li:nth-child(1) {
+  border-radius: 0 50% 0 0;
+} */
+
+/* .members_a:nth-child(3n) {
+border-radius: 50% 0;
+} */
 
 .members_a a {
   text-decoration: none;
@@ -217,6 +278,7 @@ margin-bottom: 10px;
   max-width: 480px;
   margin: 0 auto;
 } */
+
 .list {
   flex-wrap: wrap;
   margin: 0px 20px;
@@ -249,11 +311,27 @@ margin-bottom: 10px;
   border-radius: 20px;
 }
 
+.name_a {
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.prize_a {
+  text-align: center;
+}
+
 /* 
 .members-a a {
 width: 100%;
 height: 100%;
 } */
+
+
+
+
+
+
 
 
 /* B's zone */

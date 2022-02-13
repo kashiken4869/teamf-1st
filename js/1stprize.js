@@ -51,12 +51,13 @@ $(function () {
   $('.burger_btn').on('click', function () {
     $('.burger_btn').toggleClass('close');
     $('.nav_wrapper').toggleClass('slide_in'); // 書き換え
+    $('.nav_wrapper').toggleClass('fade'); // 書き換え
     $('body').toggleClass('noscroll');
   });
 });
 
-let list = document.getElementById('list')
-let introduction = document.getElementById('introduction')
+let list = document.getElementById('list');
+let introduction = document.getElementById('introduction');
 
 var show = 12; //最初に表示する件数
 var num = 11;  //clickごとに表示したい件数
@@ -72,8 +73,9 @@ for (let i = 1; i < 24; i++) {
   let introduction =
     `<li class="members_a">` +
     `<a href="member1A.html?id=${i}" >` +
-    // `<input type="button" href="member1A.html" id="id01" value="" onclick="GetQueryString(this);">` +
+    `<div class="img_container">` +
     `<img src="../imgA/iisha${i}.jpg" alt="" class="member_img_a">` +
+    `</div>` +
     `<p class="name_a">${names[i-1]}</p>` +
     `<p class="prize_a">¥${prize[i-1]}</p>` +
     `</a>` +
@@ -81,6 +83,19 @@ for (let i = 1; i < 24; i++) {
   list.insertAdjacentHTML("beforeend",introduction)
   $(contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');    
 }
+
+for (let i =1; i <24; i+=3 ) {
+$('.members_a').eq(i).addClass('change_color');
+}
+// $('.members_a').eq(4).addClass('change_color');
+
+// $(function () {
+//   $('.change').on('click', function () {
+//     $('.members_a').toggleClass('change_color');
+//   });
+// });
+
+
 
 
 // B's zone
