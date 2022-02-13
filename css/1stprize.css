@@ -52,140 +52,251 @@
   position: relative;
 }
 
-header {
-  width: 100%;
-  height: 100px;
-  /* padding: 0 30px; */
-  position: fixed;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 3px 3px 3px rgb(204 204 204);
+/*********** header開始 ************/
 
+.all-header {
+  display: flex;
+  justify-content: center;
+  background: white;
+  position: fixed;
+  width: 100%;
+  height: 96px;
+  z-index: 100;
+  box-shadow: 3px 3px 3px rgb(204 204 204);
 }
 
-.posse_logo img {
+.site-header {
+  display: flex;
+  align-items: center;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  height: 96px;
+}
+
+.posselogo img {
   max-width: 130px;
   vertical-align: middle;
   object-fit: cover;
 }
 
-.change_color {
-  /* background-color: yellow; */
+.menu-content {
+  margin-right: 10px;
 }
 
-
-h1 {
-  padding-left: 30px;
-  font-size: 40px;
-  font-style: italic;
-  font-weight: bold;
-}
-
-/* 以下、ハンバーガーボタン */
-.burger_btn{
-  display: block;      
-  width: 39px;      
-  height: 39px;      
-  position: relative;      
-  z-index: 3;
-  border:none;   
-  margin-right: 30px;
-  background-color: #fff;
-  /* padding-right: 10px; */
-}    
-.bar{      
-  width: 20px;      
-  height: 2px;        
-  display: block;      
-  position: absolute;      
-  left: 50%;      
-  transform: translateX(-50%);      
-  background-color: skyblue;    
-}    
-.bar_top{   
-  top: 15px;
-}
-.bar_mid{    
-  top: 50%;
-  transform: translate(-50%,-50%);
-}
-.bar_bottom{
-  bottom: 15px;
-}
-
-.burger_btn.close {
-  background-color: skyblue; 
-}
-
-.burger_btn.close .bar_top{      
-  transform: translate(-50%,3px) rotate(45deg);      
-  transition: transform .7s; 
-  background-color: snow;
-}    
-.burger_btn.close .bar_mid{      
-  opacity: 0;       
-  transition: opacity .7s;    
-}    
-.burger_btn.close .bar_bottom{      
-transform: translate(-50%,-5px) rotate(-45deg);      
-transition: transform .7s; 
-  background-color: snow;
-}
-
-  /* 以下、ハンバーガーメニュー */
-.nav_wrapper {
-	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
-	transform: translateX(100%);
-	transition: transform .3s;
-	width: 100vw;
-	z-index: 2; /*キービジュアルと.btn_triggerとの重なりの前後関係を調整*/
-}  
-.header_nav{        
-  width: 100%;        
-  height: 100%;        
-  background-color:skyblue;        
-  z-index: 2;      
-}     
-.nav_list{    
-  display: flex;
-  flex-direction: column;
+.topmenu {
   justify-content: center;
-  width: 500px;    
-  position: absolute;        
-  top: 50%;        
-  left: 50%;        
-  transform: translate(-50%,-50%);        
-}      
-.nav_item{        
-  text-align: center;      
-  margin-bottom: 40px;  
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  flex-grow: 1;
 }
 
-.nav_item  a {
-  text-decoration: none;
+/* ヘッダー内の文字に触れた時 */
+.header-list a:hover {
+  background-color: skyblue;
   color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* ヘッダー内文字 */
+.header-list a {
+    text-decoration: none;
+    color: black;
+    padding: 0 1vw;
+    white-space: nowrap;
 }
 
 
-/* メニューオープン時 */
-.nav_wrapper.fade {
-	visibility: visible;
-	opacity: 1;
+/* ハンバーガーメニュー非表示 */
+.menu-btn {
+  display: none;
 }
 
-.noscroll{
-  overflow: hidden;
+.linelogo img {
+  vertical-align: middle;
+  max-width: 120px;
 }
 
-.nav_wrapper.slide_in {
-	transform: translateX(0);
+.linelogo:hover {
+  filter: hue-rotate(279deg);
 }
+
+@media screen and (max-width : 1100px) {
+  .topmenu {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width : 1000px) {
+  .topmenu {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width : 960px) {
+  .topmenu {
+    font-size: 14px;
+  }
+
+  .linelogo img {
+    width: 90px;
+  }
+
+  .posselogo img {
+    width: 110px;
+  }
+}
+
+@media screen and (max-width : 768px) {
+  * {
+    float: none;
+    position: static;  
+  }
+  
+  .site-header {
+    width: 100%;
+  }
+  
+  .menu-btn {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 100px;
+    height:50px;
+    left: 0;
+    border: 0;
+    order: -1;
+    padding-right: 10px;
+    z-index: 500;
+  }
+  
+  /*ボタン内側*/
+  .menu-btn span {
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: skyblue;
+    width: 60%;
+  }
+  
+  .menu-btn span:nth-of-type(1) {
+    top:15px; 
+  }
+  
+  .menu-btn span:nth-of-type(2) {
+    top:23px;
+  }
+  
+  .menu-btn span:nth-of-type(3) {
+    top:31px;
+  }
+  
+  /*activeクラスが付与されると線が回転して×に*/
+  .menu-btn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 60%;
+  }
+  
+  .menu-btn.active span:nth-of-type(2) {
+    opacity: 0;/*真ん中の線は透過*/
+  }
+  
+  .menu-btn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 60%;
+  }
+  
+  .posselogo {
+  position: relative;
+  top: 0;
+  margin-left: 3vw;
+  }
+
+  .posselogo img {
+    width: 130px;
+  }
+
+  .menu-content {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  } 
+
+  .menu-content ul li {
+    border-bottom: solid 1px #fff;
+    list-style: none;
+  }
+
+  .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#fff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+
+  .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+  
+  .topmenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #3584bb;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -5000px;
+    left: 0;
+    transition: .4s;
+  }
+
+  .topmenu.active {
+    position: absolute;
+    top: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* ヘッダーの各々の項目 */
+  .header-list{ 
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    position: relative;
+  }
+  
+  /* ヘッダーLINEロゴ */
+  .linelogo {
+    width: 60vw;
+    margin-right: 10px;
+  }
+
+  .linelogo img {
+    width: 170px;
+  }
+}
+
+/************* header終了 *************/
 
 .list {
 padding-top: 150px;
