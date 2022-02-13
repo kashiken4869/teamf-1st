@@ -103,7 +103,56 @@ $('.members_a').eq(i).addClass('change_color');
 
 
 // C's zone
+// 配列を作ってjsで繰り返しのhtmlを記述した
 
+// 画像の配列
+const img = [
+  "/img_C/kento.png",
+  "/img_C/ponta.png",
+  "/img_C/kazunori.png",
+  "/img_C/keisiro.png",
+  "/img_C/kotoki.png",
+  "/img_C/momo.png",
+  "/img_C/tuyoshi.png",
+];
+// 名前の配列
+const memberName = [
+  "けんてぃ",
+  "ぽんた",
+  "かずのり",
+  "てらし",
+  "ことき",
+  "もも",
+  "つよし",
+]
+// 価格の配列
+const price = [
+  "１億",
+  "２億",
+  "３億",
+  "４億",
+  "５億",
+  "６億",
+  "７億",
+];
+
+// 繰り返しのhtml部分
+let contentsC = ""
+
+for (let i=img.length-1; i>=0; i--) {
+  contentsC += `<li id="${i+1}" class="member_C">`
+          +`    <a href="/html/1_C.html?id=${i+1}">`
+          +`        <div class="member_img_wrap_C">`
+          +`          <img class="member_img_C" src="${img[i]}" alt="はにゃ">`
+          +`        </div>`
+          +`        <p class="member_name_C">${memberName[i]}</p>`
+          +`        <p class="member_price_C">¥${price[i]} +tax</p>`
+          +`    </a>`
+          +`</li>`
+};
+
+// htmlに挿入
+document.getElementById("membersC").insertAdjacentHTML('beforeend', contentsC);
 
 
 // D's zone
