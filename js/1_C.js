@@ -1,3 +1,15 @@
+// headerのjQuery
+$(function () {
+    $('.burger_btn').on('click', function () {
+      $('.burger_btn').toggleClass('close');
+      $('.nav_wrapper').toggleClass('slide_in'); // 書き換え
+      $('body').toggleClass('noscroll');
+    });
+  });
+
+
+
+
 const img = [
     "/img_C/kento.png",
     "/img_C/ponta.png",
