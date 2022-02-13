@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSSE2</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/1stprize.css">
+</head>
+
+<body>
+    <!-- A's zone -->
+    <div id="splash">
+        <div id="splash_logo">
+            <img src="../imgA/footerPosseLogo.png" alt="遷移時のスライド" class="fadeUp">
+        </div>
+    </div>
+    <header>
+        <h1 class="posse_logo">
+            <a href="#top" onclick="$('html,body').animate({ scrollTop: 0 }); return false;">
+                <img src="../imgA/posselogo.jpg" alt="POSSEロゴ">
+            </a>
+        </h1>
+        <div class="line-it-button" data-lang="ja" data-type="share-c" data-env="REAL"
+            data-url="http://127.0.0.1:5500/html/1stprize.html" data-color="default" data-size="small"
+            data-count="false" data-ver="3" style="display: none;"></div>
+        <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async"
+            defer="defer"></script>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+            data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="nav_wrapper">
+            <!-- ②ナビゲーションメニュー -->
+            <nav class="header_nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="https://www.spiderman-movie.jp/">Spiderman</a></li>
+                    <li class="nav_item"><a href="https://jujutsukaisen-movie.jp/">呪術廻戦</a></li>
+                    <li class="nav_item"><a href="https://www.007.com/no-time-to-die-jp/">No Time To Die</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="burger_btn">
+            <!-- ③ハンバーガーボタン -->
+            <span class="bar bar_top"></span>
+            <!-- <span class="bar bar_mid"></span> -->
+            <span class="bar bar_bottom"></span>
+        </button>
+    </header>
+    <ul id="list" class="list">
+        <!-- <li class="members_a">
+            <a href="member1A.html">
+                <img src="../imgA/iisha.jpg" alt="" class="member_img_a">
+                <p class="name_a">じん</p>
+                <p class="prize_a">¥500000</p>
+            </a>
+        </li> -->
+
+    </ul>
+    <div class="more">
+        <button>view more</button>
+        <div class="line-it-button" data-lang="ja" data-type="share-a" data-env="REAL"
+            data-url="http://127.0.0.1:5500/html/1stprize.html" data-color="default" data-size="small"
+            data-count="false" data-ver="3" style="display: none;"></div>
+        <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async"
+            defer="defer"></script>
+
+    </div>
+
+    <!-- (li.members_a>a[href="member1A.html"]>img.member_img_a[src="../imgA/iisha${i}.jpg"]+p.name_a+p.prize_a)*23 -->
+
+    <!-- B's zone -->
+
+
+
+
+    <!-- C's zone -->
+    <ul id="membersC" class="members_C"></ul>
+
+
+    <!-- D's zone -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/1stprize.js"></script>
+</body>
+
+</html>
